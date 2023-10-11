@@ -2,7 +2,7 @@ import React from 'react';
 import "./Navbar.css";
 import { Image, Box, Icon } from "@chakra-ui/react"
 import {Search2Icon, PhoneIcon } from '@chakra-ui/icons'
-import { HStack } from '@chakra-ui/react';
+
 
 import { SocialIcon } from 'react-social-icons/component'
 import 'react-social-icons/facebook'
