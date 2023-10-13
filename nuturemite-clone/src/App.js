@@ -6,13 +6,15 @@ import * as React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import Homepage from './Pages/Homepage';
 import Footer from './Components/Footer';
+import ProductPage from './Pages/ProductPage';
 
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
     <ChakraProvider>
-    <Footer/>
+    {/* <Homepage/> */}
+    <ProductPage/>
     </ChakraProvider>
   );
 }

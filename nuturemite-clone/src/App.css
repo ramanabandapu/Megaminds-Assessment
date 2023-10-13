@@ -1,3 +1,6 @@
+/* src/index.css or src/App.css */
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
 .App {
   text-align: center;
 }
