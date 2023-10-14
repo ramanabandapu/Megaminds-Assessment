@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Text, Image, Spinner} from "@chakra-ui/react"
-// import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import "../Styles/styles.css";
+
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
@@ -17,14 +18,27 @@ import { Box } from "@chakra-ui/react";
 
 
 
-export const Slider= (dataArr)=>{
-  const {data, isLoading} = dataArr;
-  console.log(isLoading)
-//   const navigate = useNavigate();
+export const Slider= ()=>{
+  // const {data, isLoading} = dataArr;
+  // console.log(isLoading)
+  const navigate = useNavigate();
   
  const handleClick = (id)=>{
-// navigate(`/product/${id}`)
+navigate(`/product/${id}`)
  }
+
+const [products, setProducts] = useState([]);
+
+useEffect(() => {
+  const apiUrl = "http://localhost:8080/ProductList";
+
+  // Fetch products when the component mounts
+  axios
+    .get(apiUrl)
+    .then((response) => setProducts(response.data))
+    .catch((error) => console.error("Error fetching products:", error));
+}, []);
+
   return (
     <Box m='auto' mt='8' w='80%' >
      
@@ -62,20 +76,20 @@ export const Slider= (dataArr)=>{
       >
       
 
-    {data.map((elem)=> {
+    {products.map((elem)=> {
       return (
         
-        <SwiperSlide key={elem._id} onClick={()=>handleClick(elem._id)}>
+        <SwiperSlide key={elem.id} >
           
           <Box display='flex' flexDirection='column' 
           /* boxShadow='2xl' */
           p='4' h='350px' mb='8' borderRadius='xl' cursor='pointer'>
             <Box h='70%'>
-            <Image  src={elem.Image} />
+            <Image  src={elem.image} alt={elem.title}/>
             </Box>
-          <Text mt='2' fontSize='md'>{elem.Brand}</Text>
-           <Text fontSize='md' color='gray'>{elem.Title}</Text>
-           <Text fontSize='md' color='gray'> $ {elem.Price}</Text>
+          <Text mt='2' fontSize='md'>{elem.title}</Text>
+           <Text fontSize='md' color='gray'>{elem.strikedPrice}</Text>
+           <Text fontSize='md' color='gray'> $ {elem.price}</Text>
 
           </Box>
          

@@ -1,20 +1,24 @@
-
-import './App.css';
-import * as React from 'react'
-
+import "./App.css";
+import * as React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // 1. import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react'
-import Homepage from './Pages/Homepage';
-import Footer from './Components/Footer';
-import ProductPage from './Pages/ProductPage';
+import { ChakraProvider } from "@chakra-ui/react";
+import Homepage from "./Pages/Homepage";
 
+import ProductPage from "./Pages/ProductPage";
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
     <ChakraProvider>
-    {/* <Homepage/> */}
-    <ProductPage/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/products" element={<ProductPage />} />
+        </Routes>
+       
+      </BrowserRouter>
+      {/* <ProductPage/> */}
     </ChakraProvider>
   );
 }

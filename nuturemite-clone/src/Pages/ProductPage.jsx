@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ProductPage.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import { FaCartPlus } from "react-icons/fa";
 import { Select } from "@chakra-ui/react";
 import FilterOptions from "../Components/FilterOptions";
 import {
-    Slider,
-    SliderTrack,
-    SliderFilledTrack,
-    SliderThumb,
-    SliderMark,
-  } from '@chakra-ui/react'
+  Slider,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderMark,
+} from "@chakra-ui/react";
+import ProdSuggestions from "../Components/ProdSuggestions";
+import Rating from "../Components/Rating";
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
 
@@ -23,64 +27,73 @@ const ProductPage = () => {
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
-//   console.log(products);
+  //   console.log(products);
   return (
-    <div className="Products">
+    <div>
+      <Navbar />
+      <div className="Products">
         <div className="filter-container">
-        <div className="filter-div">
-        <h3>FILTER BY PRICE : </h3>
-        <br />
-        <Slider  defaultValue={30}>
-  <SliderTrack>
-    <SliderFilledTrack />
-  </SliderTrack >
-  <SliderThumb />
-</Slider>
-      </div>
-      <div className="filter-div">
-      <FilterOptions/>
-      </div>
-     
+          <div className="filter-div">
+            <h3>FILTER BY PRICE : </h3>
+            <br />
+            <Slider defaultValue={30}>
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb />
+            </Slider>
+          </div>
+          <div className="filter-div">
+            <FilterOptions />
+          </div>
+
+          <div className="prod-suggest-div">
+            <ProdSuggestions products={products} />
+          </div>
         </div>
 
-      <div>
-        <div className="sorting-div">
-           Sort By:
-         
-          <Select placeholder="Default Sorting" w={'200px'}>
-            <option value="option1">Low to High</option>
-            <option value="option2">High to Low</option>
-          </Select>
-        </div>
-        <div className="products-grid">
-          {products.map((product) => (
-            <div key={product.id} className="product-item">
-              <div className="imgdiv">
-                <img
-                  src={`${product.image}`}
-                  alt={product.title}
-                  //   style={{ width: "100px", height: "100px" }}
-                />
+        <div>
+          <div className="sorting-div">
+            Sort By:
+            <Select placeholder="Default Sorting" w={"200px"}>
+              <option value="option1">Low to High</option>
+              <option value="option2">High to Low</option>
+            </Select>
+          </div>
+          <div className="products-grid">
+            {products.map((product) => (
+              <div key={product.id} className="product-item">
+                <div className="imgdiv">
+                  <img
+                    src={`${product.image}`}
+                    alt={product.title}
+                    // style={{height: 150}}
+                  />
+                </div>
+                <div>
+                  <p className="category">{product.category}</p>
+                  <p className="ellips">{product.title}</p>
+                  <Rating stars={product.rating.rate} />
+                  <div>
+                    <span className="strike-price">
+                      {"₹" + product.strikedPrice + ".00"}
+                    </span>{" "}
+                    <span className="normal-price">
+                      {"₹" + product.price + ".00"}
+                    </span>
+                  </div>
+                  <div className="cart-btn">
+                    <button>-</button>
+                    <FaCartPlus />
+                    <button>+</button>
+                  </div>
+                </div>
               </div>
-              <div className="category">{product.category}</div>
-              <div className="ellips">{product.title}</div>
-              <div>
-                <span className="strike-price">
-                  {"₹" + product.strikedPrice + ".00"}
-                </span>{" "}
-                <span className="normal-price">
-                  {"₹" + product.price + ".00"}
-                </span>
-              </div>
-              <div className="cart-btn">
-                <button>-</button>
-                <FaCartPlus />
-                <button>+</button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

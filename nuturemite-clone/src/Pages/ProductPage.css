@@ -5,13 +5,13 @@
 }
 .filter-container{
 width: 23vw;
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 .filter-div{
-    width: 22vw;
     padding: 10px;
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .products-grid  {
     display: flex;
@@ -33,19 +33,13 @@ border: 1px solid red;
 .products-grid .product-item:hover{
 scale: 1.03;
 /* color: rgb(0,136,204); */
-
-
 }
 .category{
     text-overflow: ellipsis;
     text-wrap: nowrap;
     overflow: hidden;
-    color: rgb(167,167,167)
-}
-.ellips{
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
-    overflow: hidden;
+    color: rgb(167,167,167);
+    font-size: 14px;
 }
 
 
@@ -88,6 +82,16 @@ scale: 1.03;
 .sorting-div{
     color: grey;
     font-size: medium;
+}
+.imgdiv{
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.imgdiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* .filter-container{

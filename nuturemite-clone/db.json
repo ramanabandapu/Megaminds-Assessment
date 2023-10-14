@@ -16,7 +16,7 @@
       "price": 128,
       "strikedPrice": 198,
       "description": "AMLA, EMBLICA OFFICINALLIS, HAIR HEALTH, INDIAN GOOSEBERRY, SKIN HEALTH, SKIN LIGHTING, VITAMIN C",
-      "category": "Antioxidants",
+      "category": "ANTIOXIDANTS",
       "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074341-3-scaled.jpg",
       "rating": { "rate": 4.1, "count": 259 }
     },
@@ -56,7 +56,7 @@
         "price": 128,
         "strikedPrice": 198,
         "description": "AMLA, EMBLICA OFFICINALLIS, HAIR HEALTH, INDIAN GOOSEBERRY, SKIN HEALTH, SKIN LIGHTING, VITAMIN C",
-        "category": "Antioxidants",
+        "category": "ANTIOXIDANTS",
         "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074341-3-scaled.jpg",
         "rating": { "rate": 4.1, "count": 259 }
       },
@@ -96,7 +96,7 @@
         "price": 128,
         "strikedPrice": 198,
         "description": "AMLA, EMBLICA OFFICINALLIS, HAIR HEALTH, INDIAN GOOSEBERRY, SKIN HEALTH, SKIN LIGHTING, VITAMIN C",
-        "category": "Antioxidants",
+        "category": "ANTIOXIDANTS",
         "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074341-3-scaled.jpg",
         "rating": { "rate": 4.1, "count": 259 }
       },
@@ -136,7 +136,7 @@
         "price": 128,
         "strikedPrice": 198,
         "description": "AMLA, EMBLICA OFFICINALLIS, HAIR HEALTH, INDIAN GOOSEBERRY, SKIN HEALTH, SKIN LIGHTING, VITAMIN C",
-        "category": "Antioxidants",
+        "category": "ANTIOXIDANTS",
         "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074341-3-scaled.jpg",
         "rating": { "rate": 4.1, "count": 259 }
       },
@@ -176,39 +176,10 @@
         "price": 128,
         "strikedPrice": 198,
         "description": "AMLA, EMBLICA OFFICINALLIS, HAIR HEALTH, INDIAN GOOSEBERRY, SKIN HEALTH, SKIN LIGHTING, VITAMIN C",
-        "category": "Antioxidants",
+        "category": "ANTIOXIDANTS",
         "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074341-3-scaled.jpg",
         "rating": { "rate": 4.1, "count": 259 }
-      },
-      {
-        "id": 19,
-        "title": "Nuturemite Abso curcumin 500 mg Veg capsules",
-        "price":858,
-        "strikedPrice":1073,
-        "description": "",
-        "category": "MEN HEALTH, WOMEN HEALTH",
-        "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074354-1.jpg",
-        "rating": { "rate": 4.7, "count": 500 }
-      },
-      {
-        "id": 20,
-        "title": "Nuturemite AstaReal Astaxanthin 6 mg Veg Capsules",
-        "price": 413,
-        "strikedPrice": 516,
-        "description": "ASTAREAL, ASTAXANTHIN, DOCOSAHEXAENOIC ACID, GLUTATHIONE, LUTEIN",
-        "category": "ANTIOXIDANTS, VITAMINS& MINERALS",
-        "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074360-1.jpg",
-        "rating": { "rate": 2.1, "count": 430 }
-      },
-      {
-        "id": 1,
-        "title": "Nuturemite Ashwagandha Powder 900 gms",
-        "price": 844.00,
-        "strikedPrice": 1998,
-        "description": "SHTAVARI WOMEN HEALTH HORMONAL BALANCE ESTROGEN LEVELS BREAST HEALTH HOT FLASHES LACTATION FERTILITY VITAMINS FOLIC ACID OVULATION MENOPAUSAL",
-        "category": "AYURVEDIC",
-        "image": "https://nuturemite.info/wp-content/uploads/2022/11/1074342-3.jpg",
-        "rating": { "rate": 3.9, "count": 120 }
       }
+      
   ]
 }

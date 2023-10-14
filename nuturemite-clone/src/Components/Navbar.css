@@ -1,15 +1,24 @@
 .pages-div {
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .Navbar-div {
-  height: 200px;
+  height: 120px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .Navbar-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #ffffff;
 }
 
 .pages-2-div > button {
@@ -23,18 +32,19 @@
 .pages-2-div > button:hover {
   background-color: rgb(0, 136, 204);
   color: white;
+  border-radius: 3px;
 }
-
+.mobile{
+  font-size: 12px;
+  color: #787878;
+}
 .pages-1-div {
-  width: 500px;
-  margin-top: 70px;
-  margin-left: 200px;
   display: flex;
-  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
 }
 
 .pages-2-div {
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,13 +54,18 @@
   color: grey;
   font-size: small;
 }
+.pages-1-div > button:hover,
+.pages-1-div > a:hover{
+  color: rgb(0, 136, 204);
+}
+
+
 input {
   border: 1px solid grey;
   color: grey;
   padding: 5px 10px;
-}
-input:hover {
-  border: grey;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .input-container {
@@ -58,23 +73,13 @@ input:hover {
 }
 .search-icon {
   position: absolute;
-  top: 10px;
+  top: 6px;
   right: 10px;
 }
 
 .social-div {
-  width: 250px;
-  margin-left: 65%;
-  margin-top: 10px;
-}
-
-.social-div {
   display: flex;
+  gap: 10px;
   justify-content: space-evenly;
-}
-.social-icon :hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+  align-items: center;
 }

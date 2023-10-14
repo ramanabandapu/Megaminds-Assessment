@@ -10,7 +10,7 @@ import {
 import { faHandHoldingDollar } from "@fortawesome/free-solid-svg-icons";
 import { Slider } from "../Components/Slider";
 
-const Homepage = () => {
+const Homepage = ({products}) => {
   return (
     <div className="home-container">
       <div className="static-div">
@@ -92,7 +92,7 @@ const Homepage = () => {
             </Stack>
           </CheckboxGroup>
         </div>
-        <Slider/>
+        <Slider />
       </div>
     </div>
   );
