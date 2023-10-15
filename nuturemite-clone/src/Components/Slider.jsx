@@ -69,6 +69,10 @@ useEffect(() => {
               slidesPerView: 4,
               spaceBetween: 50,
             },
+            "@2.00": {
+              slidesPerView: 5,
+              spaceBetween: 60,
+            },
           }}
         navigation={true}
         modules={[Pagination, Navigation]}
@@ -87,9 +91,9 @@ useEffect(() => {
             <Box h='70%'>
             <Image  src={elem.image} alt={elem.title}/>
             </Box>
-          <Text mt='2' fontSize='md'>{elem.title}</Text>
-           <Text fontSize='md' color='gray'>{elem.strikedPrice}</Text>
-           <Text fontSize='md' color='gray'> $ {elem.price}</Text>
+          <Text className="ellips" mt='2' fontSize='md'>{elem.title}</Text>
+           <Text fontSize='md' color='gray' textDecoration={'line-through'} className="prices" >₹{elem.strikedPrice+'.00'}</Text>
+           <Text fontSize='md' color='gray' className="prices" > ₹{elem.price+'.00'}</Text>
 
           </Box>
          

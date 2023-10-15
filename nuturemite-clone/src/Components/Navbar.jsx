@@ -1,6 +1,5 @@
-import React from "react";
-import "./Navbar.css";
-import { Image, Box, Icon } from "@chakra-ui/react";
+import React,{useState} from "react";
+import { Image, Box } from "@chakra-ui/react";
 import { Search2Icon, PhoneIcon } from "@chakra-ui/icons";
 
 import { SocialIcon } from "react-social-icons/component";
@@ -9,7 +8,15 @@ import "react-social-icons/twitter";
 import "react-social-icons/youtube";
 import "react-social-icons/linkedin";
 import "react-social-icons/instagram";
+import "./Navbar.css";
+
 const Navbar = () => {
+
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <div className="Navbar-div">
       <Box boxSize="90px">
@@ -20,8 +27,20 @@ const Navbar = () => {
       </Box>
 
       <div className="pages-div">
-       
+      <div className={`pages-2-div ${isMobileMenuOpen ? 'menu-open' : ''}`}>
+      <i className="fas fa-bars menu-icon" onClick={toggleMobileMenu}></i>
+      <button>HOME</button>
+      <button>BLOG</button>
+      <button>SHOP</button>
+      <button>CART</button>
+      <button>MY ACCOUNT</button>
+      <button>ABOUT US</button>
+      <button>LOGIN</button>
+      <button>REGISTER</button>
+    </div>
 
+       
+{/* 
         <div className="pages-2-div">
           <button>HOME</button>
           <button>BLOG</button>
@@ -31,7 +50,7 @@ const Navbar = () => {
           <button>ABOUT US</button>
           <button>LOGIN</button>
           <button>REGISTER</button>
-        </div>
+        </div> */}
 
         <div className="pages-1-div">
           <button><i class="fas fa-chevron-right"></i> About us</button>

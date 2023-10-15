@@ -31,6 +31,7 @@ p{
 }
 .sort-div{
     margin-left: 20px;
+    padding-bottom: 20px;
     width: 200px;
     border-right: 0.1px solid  rgb(95, 96, 97);
 }
@@ -39,7 +40,14 @@ p{
     padding-top: 5px;
     padding-bottom: 10px;
 }
+.sort-container{
+    display: flex;
+}
 
-
-
+.static-3-div{
+    background-color: rgb(244,244,244);
+    padding-left: 50px;
+    height: 100px;
+    padding-top: 15px;
+}
 

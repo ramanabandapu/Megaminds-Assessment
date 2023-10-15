@@ -94,6 +94,16 @@ const Homepage = ({products}) => {
         </div>
         <Slider />
       </div>
+      
+      <div className="static-3-div">
+        <h1>This Week's Specials</h1>
+        <p>All our new arrivals in a exclusive brand selection</p>
+       
+      </div>
+
+<Slider/>
+
+
     </div>
   );
 };
