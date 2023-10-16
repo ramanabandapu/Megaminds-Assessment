@@ -9,10 +9,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHandHoldingDollar } from "@fortawesome/free-solid-svg-icons";
 import { Slider } from "../Components/Slider";
+import Carousel from "../Components/Carousel";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Homepage = ({products}) => {
   return (
     <div className="home-container">
+      <Navbar/>
+      <Carousel/>
+
       <div className="static-div">
         <div>
           <FontAwesomeIcon
@@ -102,7 +108,7 @@ const Homepage = ({products}) => {
       </div>
 
 <Slider/>
-
+<Footer/>
 
     </div>
   );

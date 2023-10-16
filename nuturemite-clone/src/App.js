@@ -6,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Homepage from "./Pages/Homepage";
 
 import ProductPage from "./Pages/ProductPage";
+import CaptionCarousel from "./Components/Carousel";
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
@@ -15,6 +16,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/products" element={<ProductPage />} />
+          <Route exact path="/carousel" element={<CaptionCarousel />} />
+
         </Routes>
        
       </BrowserRouter>
