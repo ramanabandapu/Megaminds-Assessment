@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/products" element={<ProductPage />} />
-          <Route exact path="/carousel" element={<CaptionCarousel />} />
+         
 
         </Routes>
        
